@@ -24,6 +24,7 @@ public class JumpController : MonoBehaviour
     [SerializeField] private float m_TimeToTarget = 5f;
     [SerializeField] private Color m_ChargeColor = Color.yellow;
     [SerializeField] private Color m_MaxChargeColor = Color.red;
+    [SerializeField] private ParticleSystem m_JumpStreamEffect;
 
     [Header("Charge")]
     [SerializeField] private float m_MaxJumpChargeTime = 3f;
@@ -71,10 +72,6 @@ public class JumpController : MonoBehaviour
 
         UpdateVisuals();
 
-        CheckForGrounded();
-
-        CheckForGroundHit();
-
         JumpTimer();
 
         CheckForJump();
@@ -84,6 +81,9 @@ public class JumpController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        CheckForGrounded();
+
+        CheckForGroundHit();
     }
 
     private void CheckForGroundedWithRay()
@@ -150,6 +150,7 @@ public class JumpController : MonoBehaviour
             m_CameraController.ResetFOV();
             m_CameraController.SetShakeMultiplier(1f);
             m_CameraController.ShakeCamera(false);
+            m_JumpStreamEffect.gameObject.SetActive(false);
         }
 
         //if (m_AllWheelsAreGrounded && m_InAir && m_AllowHitGround && m_JumpChargeTimer == -2f)
@@ -253,21 +254,22 @@ public class JumpController : MonoBehaviour
 
     private IEnumerator DelayedJump()
     {
+        Debug.DrawRay(m_Rigidbody.position, m_Rigidbody.transform.forward * m_JumpLength, Color.red);
+
         Debug.Log("Jumped");
-        yield return new WaitForEndOfFrame();
+        m_AllowHitGround = false; //
+        m_AllWheelsAreGrounded = false; //
+        m_JumpChargeTimer = -2f; //
 
-        m_AllowHitGround = false;
-        m_AllWheelsAreGrounded = false;
-        m_InAir = true;
-        m_JumpChargeTimer = -2f;
+        m_JumpStreamEffect.gameObject.SetActive(true);
 
-        m_CameraController.ShakeCamera(true);
+        m_CameraController.ShakeCamera(false);
         m_CameraController.SetShakeMultiplier(1.5f);
+        m_CameraController.PulseAndFov(0.1f, m_TimeToTarget * 0.9f, 100f);
 
         m_Rigidbody.velocity = Vector3.zero;
         m_Rigidbody.angularVelocity = Vector3.zero;
 
-        Debug.DrawRay(m_Rigidbody.position, m_Rigidbody.transform.forward * m_JumpLength, Color.red);
 
         Vector3 targetPoint = m_Rigidbody.position + m_Rigidbody.transform.forward * m_JumpLength;
 
@@ -275,15 +277,15 @@ public class JumpController : MonoBehaviour
 
         Vector3 throwSpeed = CalculateJump(m_Rigidbody.position, targetPoint, timeToTarget);
 
-        m_CameraController.PulseAndFov(0.1f, 0.2f, 100f);
 
         m_Rigidbody.AddForce(throwSpeed, ForceMode.VelocityChange);
 
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
+        m_InAir = true; //
 
-        m_AllowHitGround = true;
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(0.5f);
 
+        m_AllowHitGround = true; // 
     }
 
     private void Jump()

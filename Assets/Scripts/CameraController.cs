@@ -155,6 +155,7 @@ public class CameraController : MonoBehaviour
         while (elapsedTime < duration && gameObject.activeInHierarchy)
         {
             elapsedTime += Time.deltaTime;
+            //m_Camera.fieldOfView = Mathf.Lerp(m_StartFieldOfView, FOV, elapsedTime / duration);
             m_Camera.fieldOfView = Mathf.Lerp(m_Camera.fieldOfView, FOV, elapsedTime / duration);
 
             yield return null;
