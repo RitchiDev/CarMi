@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
 
     [Header("Camera Shake")]
     [SerializeField] private float m_ShakeStrength = 1f;
+    private float m_ShakeMultiplier = 1f;
     private bool m_ScreenShakeIsOn;
     private bool m_ShakeCamera;
 
@@ -31,6 +32,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         m_StartPosition = m_Camera.transform.localPosition;
+        m_StartFieldOfView = m_Camera.fieldOfView;
     }
 
     private void Update()
@@ -53,12 +55,17 @@ public class CameraController : MonoBehaviour
 
         if(m_ShakeCamera)
         {
-            m_Camera.transform.localPosition = m_StartPosition + UnityEngine.Random.insideUnitSphere * m_ShakeStrength;
+            m_Camera.transform.localPosition = m_StartPosition + UnityEngine.Random.insideUnitSphere * m_ShakeStrength * m_ShakeMultiplier;
         }
         else
         {
             m_Camera.transform.localPosition = m_StartPosition;
         }
+    }
+
+    public void SetShakeMultiplier(float value)
+    {
+        m_ShakeMultiplier = value;
     }
 
     public void ShakeCamera(bool value)
@@ -79,6 +86,21 @@ public class CameraController : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, m_RotationSpeed * Time.deltaTime);
     }
 
+    public void ResetFOV()
+    {
+        Pulse(0.5f);
+    }
+
+    public void PulseAndFov(float pulseDuration, float FOVReachTime, float FOV)
+    {
+        if (!m_ScreenShakeIsOn)
+        {
+            return;
+        }
+
+        StartCoroutine(PulseTimer(pulseDuration));
+        StartCoroutine(JumpFOV(pulseDuration, FOVReachTime, FOV));
+    }
 
     public void Pulse(float duration)
     {
@@ -115,5 +137,29 @@ public class CameraController : MonoBehaviour
         }
 
         m_Camera.fieldOfView = m_StartFieldOfView;
+    }
+
+    private IEnumerator JumpFOV(float delay, float duration, float FOV)
+    {
+        float elapsedDelay = 0f;
+
+        while (elapsedDelay < (delay + 0.1f) && gameObject.activeInHierarchy)
+        {
+            elapsedDelay += Time.deltaTime;
+
+            yield return null;
+        }
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration && gameObject.activeInHierarchy)
+        {
+            elapsedTime += Time.deltaTime;
+            m_Camera.fieldOfView = Mathf.Lerp(m_Camera.fieldOfView, FOV, elapsedTime / duration);
+
+            yield return null;
+        }
+
+        m_Camera.fieldOfView = FOV;
     }
 }
