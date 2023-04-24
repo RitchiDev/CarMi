@@ -12,12 +12,14 @@ public class CarController : MonoBehaviour
 
     private float m_HorizontalInput;
     private float m_VerticalInput;
+    private bool m_IsBraking;
+
     private float m_CurrentSteerAngle;
     private float m_CurrentbreakForce;
-    private bool m_IsBreaking;
     private float m_CurrentAcceleration;
     private float m_CurrentSpeed;
-    private float m_VelocityAngle; 
+    private float m_VelocityAngle;
+    public float VelocityAngle => m_VelocityAngle;
 	public int CarDirection { get { return m_CurrentSpeed < 1 ? 0 : (m_VelocityAngle < 90 && m_VelocityAngle > -90 ? 1 : -1); } }
 
     [SerializeField] AnimationCurve m_MotorTorqueFromRpmCurve;
@@ -31,24 +33,19 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private float m_BreakForce;
     [SerializeField] private float m_MaxSteerAngle;
+
+    [SerializeField] private float m_UprightTurnSpeed = 10f;
     [SerializeField] private Transform m_CenterOfMass;
     private Rigidbody m_Rigidbody;
+    private bool m_AllWheelsAreGrounded;
+
+    [SerializeField] private List<WheelConfig> m_Wheels = new List<WheelConfig>();
 
     [Header("FL")]
-    [SerializeField] private Transform m_FrontLeftWheelTransform;
     [SerializeField] private WheelCollider m_FrontLeftWheelCollider;
 
     [Header("FR")]
-    [SerializeField] private Transform m_FrontRightWheeTransform;
     [SerializeField] private WheelCollider m_FrontRightWheelCollider;
-
-    [Header("RL")]
-    [SerializeField] private Transform m_RearLeftWheelTransform;
-    [SerializeField] private WheelCollider m_RearLeftWheelCollider;
-
-    [Header("RR")]
-    [SerializeField] private Transform m_RearRightWheelTransform;
-    [SerializeField] private WheelCollider m_RearRightWheelCollider;
 
     private void Awake()
     {
@@ -81,14 +78,20 @@ public class CarController : MonoBehaviour
 		m_VelocityAngle = -Vector3.SignedAngle(m_Rigidbody.velocity, transform.TransformDirection (Vector3.forward), Vector3.up);
 
         GetInput();
+
+        UpdateWheelsVisual();
+
+        CheckForGrounded();
     }
 
     private void FixedUpdate()
     {
+        TurnUpright();
+
         HandleMotor();
         HandleSteering();
         UpdateWheels();
-        ApplyBreaking();
+        CheckForBraking();
     }
 
     // If using performed
@@ -104,7 +107,7 @@ public class CarController : MonoBehaviour
         m_VerticalInput = m_MovementAction.ReadValue<Vector2>().y;
 
         m_CurrentAcceleration = m_VerticalInput;
-        m_IsBreaking = m_BrakeAction.IsPressed();
+        m_IsBraking = m_BrakeAction.IsPressed();
     }
 
     private void HandleMotor()
@@ -143,10 +146,14 @@ public class CarController : MonoBehaviour
                     m_FrontRightWheelCollider.motorTorque = 0;
                 }
             }
-            //else
-            //{
-            //    CurrentBrake = MaxBrakeTorque;
-            //}
+            else
+            {
+                //for (int i = 0; i < m_Wheels.Count; i++)
+                //{
+                //    WheelConfig wheelConfig = m_Wheels[i];
+                //    wheelConfig.GetWheelCollider().brakeTorque = m_BreakForce;
+                //}
+            }
         }
         else
         {
@@ -158,23 +165,35 @@ public class CarController : MonoBehaviour
         //m_FrontRightWheelCollider.motorTorque = m_VerticalInput * m_MotorForce;
     }
 
-    private void ApplyBreaking()
+    private void CheckForBraking()
     {
-        if (!m_IsBreaking)
+        if (m_IsBraking)
         {
-            m_FrontRightWheelCollider.brakeTorque = 0f;
-            m_FrontLeftWheelCollider.brakeTorque = 0f;
-            m_RearLeftWheelCollider.brakeTorque = 0f;
-            m_RearRightWheelCollider.brakeTorque = 0f;
+            for (int i = 0; i < m_Wheels.Count; i++)
+            {
+                WheelConfig wheelConfig = m_Wheels[i];
+                wheelConfig.GetWheelCollider().brakeTorque = m_BreakForce;
+            }
         }
         else
         {
-
-            m_FrontRightWheelCollider.brakeTorque = m_BreakForce;
-            m_FrontLeftWheelCollider.brakeTorque = m_BreakForce;
-            m_RearLeftWheelCollider.brakeTorque = m_BreakForce;
-            m_RearRightWheelCollider.brakeTorque = m_BreakForce;
+            for (int i = 0; i < m_Wheels.Count; i++)
+            {
+                WheelConfig wheelConfig = m_Wheels[i];
+                wheelConfig.GetWheelCollider().brakeTorque = 0f;
+            }
         }
+    }
+
+    private void TurnUpright()
+    {
+        if(m_AllWheelsAreGrounded)
+        {
+            return;
+        }
+
+        Quaternion q = Quaternion.FromToRotation(m_Rigidbody.transform.up, Vector3.up) * m_Rigidbody.transform.rotation;
+        m_Rigidbody.transform.rotation = Quaternion.Slerp(m_Rigidbody.transform.rotation, q, Time.deltaTime * m_UprightTurnSpeed);
     }
 
     private void HandleSteering()
@@ -186,18 +205,33 @@ public class CarController : MonoBehaviour
 
     private void UpdateWheels()
     {
-        UpdateSingleWheel(m_FrontLeftWheelCollider, m_FrontLeftWheelTransform);
-        UpdateSingleWheel(m_FrontRightWheelCollider, m_FrontRightWheeTransform);
-        UpdateSingleWheel(m_RearRightWheelCollider, m_RearRightWheelTransform);
-        UpdateSingleWheel(m_RearLeftWheelCollider, m_RearLeftWheelTransform);
+        for (int i = 0; i < m_Wheels.Count; i++)
+        {
+            WheelConfig wheelConfig = m_Wheels[i];
+            wheelConfig.FixedUpdate();
+        }
     }
 
-    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
+    private void UpdateWheelsVisual()
     {
-        Vector3 pos;
-        Quaternion rot
-;       wheelCollider.GetWorldPose(out pos, out rot);
-        wheelTransform.rotation = rot;
-        wheelTransform.position = pos;
+        for (int i = 0; i < m_Wheels.Count; i++)
+        {
+            WheelConfig wheelConfig = m_Wheels[i];
+            wheelConfig.UpdateVisual();
+        }
+    }
+
+    private void CheckForGrounded()
+    {
+        m_AllWheelsAreGrounded = true;
+
+        for (int i = 0; i < m_Wheels.Count; i++)
+        {
+            WheelConfig wheelConfig = m_Wheels[i];
+            if (!wheelConfig.GetIfIsGrounded())
+            {
+                m_AllWheelsAreGrounded = false;
+            }
+        }
     }
 }

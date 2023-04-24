@@ -62,6 +62,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChargeJump"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2988c2b-6915-4f00-b947-d4d36417012e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -678,6 +687,61 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Switch Pro Controller"",
                     ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3800780c-4b9e-47e7-b4fd-8f706799ce3d"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ChargeJump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b68395c4-5f8e-4e06-8b10-516ccf34191c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChargeJump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""43835040-63de-4ea8-8263-5f2f6ce75fb2"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PlayStation Controller"",
+                    ""action"": ""ChargeJump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f52cf698-1975-4bc4-bd0a-bf7c4a20a0d1"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox Controller"",
+                    ""action"": ""ChargeJump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa66200a-dbe2-492c-bf35-be509ffd4a66"",
+                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Switch Pro Controller"",
+                    ""action"": ""ChargeJump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1403,6 +1467,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_QuickRetry = m_Player.FindAction("Quick Retry", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Brake = m_Player.FindAction("Brake", throwIfNotFound: true);
+        m_Player_ChargeJump = m_Player.FindAction("ChargeJump", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1480,6 +1545,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_QuickRetry;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Brake;
+    private readonly InputAction m_Player_ChargeJump;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -1488,6 +1554,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @QuickRetry => m_Wrapper.m_Player_QuickRetry;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Brake => m_Wrapper.m_Player_Brake;
+        public InputAction @ChargeJump => m_Wrapper.m_Player_ChargeJump;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1509,6 +1576,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Brake.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
                 @Brake.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
                 @Brake.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
+                @ChargeJump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeJump;
+                @ChargeJump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeJump;
+                @ChargeJump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeJump;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1525,6 +1595,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Brake.started += instance.OnBrake;
                 @Brake.performed += instance.OnBrake;
                 @Brake.canceled += instance.OnBrake;
+                @ChargeJump.started += instance.OnChargeJump;
+                @ChargeJump.performed += instance.OnChargeJump;
+                @ChargeJump.canceled += instance.OnChargeJump;
             }
         }
     }
@@ -1701,6 +1774,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnQuickRetry(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
+        void OnChargeJump(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
