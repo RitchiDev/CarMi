@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     private Vector3 m_StartPosition;
 
     [Header("Camera Shake")]
+    [SerializeField] private AnimationCurve m_TimedShakeStrengthCurve;
     [SerializeField] private float m_ShakeStrength = 1f;
     private float m_ShakeMultiplier = 1f;
     private bool m_ScreenShakeIsOn;
@@ -44,6 +45,32 @@ public class CameraController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
+    }
+
+    public void TimedShakeCamera(float duration)
+    {
+        if (!m_ScreenShakeIsOn)
+        {
+            return;
+        }
+
+        StartCoroutine(ShakeTimer(duration));
+    }
+
+    private IEnumerator ShakeTimer(float duration)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration && gameObject.activeInHierarchy)
+        {
+            elapsedTime += Time.deltaTime;
+            float strength = m_TimedShakeStrengthCurve.Evaluate(elapsedTime / duration);
+            m_Camera.transform.localPosition = m_StartPosition + UnityEngine.Random.insideUnitSphere * strength * 10f;
+
+            yield return null;
+        }
+
+        m_Camera.transform.localPosition = m_StartPosition;
     }
 
     public void HandleCameraShake()

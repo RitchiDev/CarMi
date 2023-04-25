@@ -9,15 +9,23 @@ using UnityEngine.UI;
 public class JumpController : MonoBehaviour
 {
     private PlayerInput m_Input;
+    private InputAction m_MovementAction;
     private InputAction m_ChargeJumpAction;
-    private bool m_IsChargingJump;
+
     private bool m_AllWheelsAreGrounded;
     private bool m_InAir;
+
+    private float m_HorizontalInput;
+    private float m_VerticalInput;
+    private bool m_IsChargingJump;
 
     private Rigidbody m_Rigidbody;
     [SerializeField] private CameraController m_CameraController;
 
     [SerializeField] private List<WheelConfig> m_Wheels = new List<WheelConfig>();
+
+    [Header("In Air")]
+    [SerializeField] private float m_InAirMovementSpeed;
 
     [Header("Jump")]
     [SerializeField] private float m_JumpLength = 100f;
@@ -53,6 +61,8 @@ public class JumpController : MonoBehaviour
 
     private void OnEnable()
     {
+        m_MovementAction = m_Input.Player.Movement;
+        m_MovementAction.Enable();
 
         m_ChargeJumpAction = m_Input.Player.ChargeJump;
         m_ChargeJumpAction.Enable();
@@ -63,12 +73,14 @@ public class JumpController : MonoBehaviour
     private void OnDisable()
     {
         m_ChargeJumpAction.Disable();
+        m_MovementAction.Disable();
+
         //m_MovementAction.performed -= UpdateMovementValue;
     }
 
     private void Update()
     {
-        m_IsChargingJump = m_ChargeJumpAction.IsPressed();
+        GetInput();
 
         UpdateVisuals();
 
@@ -84,6 +96,29 @@ public class JumpController : MonoBehaviour
         CheckForGrounded();
 
         CheckForGroundHit();
+
+        HandleInAirMovement();
+    }
+
+    private void GetInput()
+    {
+        m_HorizontalInput = m_MovementAction.ReadValue<Vector2>().x;
+        m_VerticalInput = m_MovementAction.ReadValue<Vector2>().y;
+
+        m_IsChargingJump = m_ChargeJumpAction.IsPressed();
+    }
+
+    private void HandleInAirMovement()
+    {
+        if (!m_InAir)
+        {
+            return;
+        }
+
+        // Should be rigidbody.rotation, but since that doesn't work and this a game jame... *shrug*
+        transform.rotation = Quaternion.LookRotation(m_Rigidbody.velocity, Vector3.up);
+
+        m_Rigidbody.AddForce(m_Rigidbody.transform.right * m_HorizontalInput * m_InAirMovementSpeed);
     }
 
     private void CheckForGroundedWithRay()
@@ -145,27 +180,18 @@ public class JumpController : MonoBehaviour
         if (groundHit && m_InAir && m_AllowHitGround)
         {
             Debug.Log("Hit Ground");
-            m_InAir = false;
-            m_JumpChargeTimer = 0f;
+
+            //m_CameraController.SetShakeMultiplier(1f);
+            //m_CameraController.ShakeCamera(false);
+
             m_CameraController.ResetFOV();
-            m_CameraController.SetShakeMultiplier(1f);
-            m_CameraController.ShakeCamera(false);
             m_JumpStreamEffect.gameObject.SetActive(false);
+
+            m_CameraController.TimedShakeCamera(0.2f);
+
+            m_JumpChargeTimer = 0f;
+            m_InAir = false;
         }
-
-        //if (m_AllWheelsAreGrounded && m_InAir && m_AllowHitGround && m_JumpChargeTimer == -2f)
-        //{
-        //    Debug.Log("Hit Ground");
-        //    Debug.Log($"All W: {m_AllWheelsAreGrounded} - Air: {m_InAir} - Allow: {m_AllowHitGround}");
-
-        //    //m_AllowHitGround = false;
-        //    m_InAir = false;
-
-        //    m_JumpChargeTimer = 0f;
-        //    m_CameraController.ResetFOV();
-        //    m_CameraController.SetShakeMultiplier(1f);
-        //    m_CameraController.ShakeCamera(false);
-        //}
     }
 
     private void CheckForJump()
@@ -265,18 +291,16 @@ public class JumpController : MonoBehaviour
 
         m_CameraController.ShakeCamera(false);
         m_CameraController.SetShakeMultiplier(1.5f);
-        m_CameraController.PulseAndFov(0.1f, m_TimeToTarget * 0.9f, 100f);
+        m_CameraController.PulseAndFov(0.1f, m_TimeToTarget * 0.9f, 110f);
 
         m_Rigidbody.velocity = Vector3.zero;
         m_Rigidbody.angularVelocity = Vector3.zero;
-
 
         Vector3 targetPoint = m_Rigidbody.position + m_Rigidbody.transform.forward * m_JumpLength;
 
         float timeToTarget = m_TimeToTarget;
 
         Vector3 throwSpeed = CalculateJump(m_Rigidbody.position, targetPoint, timeToTarget);
-
 
         m_Rigidbody.AddForce(throwSpeed, ForceMode.VelocityChange);
 
