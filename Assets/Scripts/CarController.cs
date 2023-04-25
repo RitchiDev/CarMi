@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour
     private PlayerInput m_Input;
     private InputAction m_MovementAction;
     private InputAction m_BrakeAction;
+    private JumpController m_JumpController;
 
     private float m_HorizontalInput;
     private float m_VerticalInput;
@@ -22,7 +23,7 @@ public class CarController : MonoBehaviour
     public float VelocityAngle => m_VelocityAngle;
 	public int CarDirection { get { return m_CurrentSpeed < 1 ? 0 : (m_VelocityAngle < 90 && m_VelocityAngle > -90 ? 1 : -1); } }
 
-    [SerializeField] AnimationCurve m_MotorTorqueFromRpmCurve;
+    [SerializeField] private AnimationCurve m_MotorTorqueFromRpmCurve;
     private float m_EngineRPM;
 
     [SerializeField] private float m_RpmEngineToRpmWheelsLerpSpeed;
@@ -47,15 +48,42 @@ public class CarController : MonoBehaviour
     [Header("FR")]
     [SerializeField] private WheelCollider m_FrontRightWheelCollider;
 
+    [Header("Effect")]
+    [SerializeField] private ParticleSystem m_AsphaltSmokeEffect;
+    public ParticleSystem AsphaltSmokeEffect => m_AsphaltSmokeEffect;
+    [SerializeField] private TrailRenderer m_TrailRenderer; // Trail renderer, The lifetime of the tracks is configured in it.
+    public TrailRenderer TrailRenderer => m_TrailRenderer;
+    [SerializeField] private Transform m_TrailHolder; // Parent for copy of the trail renderer.
+    private Queue<TrailRenderer> m_AvailableTrails = new Queue<TrailRenderer>();
+
+    [Header("Engine Sound")]
+    [SerializeField] private AudioSource m_EngineAudioSource;
+    [SerializeField] float m_PitchOffset = 0.5f;
+
+    [Header("Slip Sound")]
+    [SerializeField] private AudioSource m_TireSlipAudioSource;
+    [SerializeField] private float m_MinSlipSound = 0.15f;
+    [SerializeField] float m_MaxSlipForSound = 1f;
+    private float m_CurrentMaxSlip;
+
     private void Awake()
     {
         m_Input = new PlayerInput();
+        m_JumpController = GetComponent<JumpController>();
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Rigidbody.centerOfMass = m_CenterOfMass.localPosition;
+
+        for (int i = 0; i < m_Wheels.Count; i++)
+        {
+            WheelConfig wheelConfig = m_Wheels[i];
+            wheelConfig.SetController(this);
+        }
     }
 
     private void OnEnable()
     {
+        m_CurrentMaxSlip = m_Wheels[0].CurrentMaxSlip;
+
         m_MovementAction = m_Input.Player.Movement;
         m_MovementAction.Enable();
 
@@ -82,6 +110,10 @@ public class CarController : MonoBehaviour
         UpdateWheelsVisual();
 
         CheckForGrounded();
+
+        HandleMaxSlip();
+
+        UpdateAudio();
     }
 
     private void FixedUpdate()
@@ -108,6 +140,95 @@ public class CarController : MonoBehaviour
 
         m_CurrentAcceleration = m_VerticalInput;
         m_IsBraking = m_BrakeAction.IsPressed();
+    }
+
+    private void HandleMaxSlip()
+    {
+        m_CurrentMaxSlip = m_Wheels[0].CurrentMaxSlip;
+
+        for (int i = 0; i < m_Wheels.Count; i++)
+        {
+            WheelConfig wheelConfig = m_Wheels[i];
+
+            if (m_CurrentMaxSlip < wheelConfig.CurrentMaxSlip)
+            {
+                m_CurrentMaxSlip = wheelConfig.CurrentMaxSlip;
+            }
+        }
+    }
+
+    private void UpdateAudio()
+    {
+        // Engine PRM sound
+        if (m_JumpController.AllWheelsAreGrounded())
+        {
+            m_EngineAudioSource.pitch = (m_EngineRPM / m_MaxRPM) + m_PitchOffset;
+            //if (!m_EngineAudioSource.isPlaying)
+            //{
+            //    m_EngineAudioSource.Play();
+            //}
+        }
+        else
+        {
+            m_EngineAudioSource.pitch = 0.5f + m_PitchOffset;
+
+            //if (m_EngineAudioSource.isPlaying)
+            //{
+            //    m_EngineAudioSource.Stop();
+            //}
+        }
+
+        // Slip sound logic
+        if (m_MaxSlipForSound > m_MinSlipSound)
+        {
+            if (!m_TireSlipAudioSource.isPlaying)
+            {
+                m_TireSlipAudioSource.Play();
+            }
+
+            float slipVolumeProcent = m_CurrentMaxSlip / m_MaxSlipForSound;
+            m_TireSlipAudioSource.volume = slipVolumeProcent * 0.5f;
+            m_TireSlipAudioSource.pitch = Mathf.Clamp(slipVolumeProcent, 0.75f, 1);
+        }
+        else
+        {
+            m_TireSlipAudioSource.Stop();
+        }
+    }
+
+    public TrailRenderer GetAvailableTrail(Vector3 startPosition)
+    {
+        TrailRenderer trail = null;
+        if (m_AvailableTrails.Count > 0)
+        {
+            trail = m_AvailableTrails.Dequeue();
+        }
+        else
+        {
+            trail = Instantiate(m_TrailRenderer, m_TrailHolder);
+        }
+
+        trail.transform.position = startPosition;
+        trail.gameObject.SetActive(true);
+
+        return trail;
+    }
+
+    public void SetAvailableTrail(TrailRenderer trail)
+    {
+        StartCoroutine(WaitUntillTrailHasDissapeared(trail));
+    }
+
+    /// <summary>
+	/// The trail is considered busy until it has disappeared.
+	/// </summary>
+	private IEnumerator WaitUntillTrailHasDissapeared(TrailRenderer trail)
+    {
+        trail.transform.SetParent(m_TrailHolder);
+        yield return new WaitForSeconds(trail.time);
+        trail.Clear();
+        trail.gameObject.SetActive(false);
+        m_AvailableTrails.Enqueue(trail);
     }
 
     private void HandleMotor()
@@ -167,6 +288,7 @@ public class CarController : MonoBehaviour
 
     private void CheckForBraking()
     {
+        // APPLY DRY CONCEPT
         if (m_IsBraking)
         {
             for (int i = 0; i < m_Wheels.Count; i++)

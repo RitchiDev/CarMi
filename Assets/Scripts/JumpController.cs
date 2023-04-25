@@ -26,6 +26,7 @@ public class JumpController : MonoBehaviour
 
     [Header("In Air")]
     [SerializeField] private float m_InAirMovementSpeed;
+    [SerializeField] private ParticleSystem m_PoofEffect;
 
     [Header("Jump")]
     [SerializeField] private float m_JumpLength = 100f;
@@ -40,6 +41,15 @@ public class JumpController : MonoBehaviour
     [SerializeField] private Image m_JumpChargeImage;
     [SerializeField] private ParticleSystem m_JumpChargeEffect;
     private float m_JumpChargeTimer;
+
+    [Header("Flight Sound")]
+    [SerializeField] private AudioSource m_JumpAudioSource;
+    [SerializeField] private AudioSource m_ThudAudioSource;
+    //[SerializeField] private AudioSource m_InAirAudioSource;
+
+    [Header("Charge Sound")]
+    [SerializeField] private AudioSource m_ChargeAudioSource;
+    [SerializeField] float m_PitchOffset = 0.5f;
 
     [Header("Layers")]
     [SerializeField] protected LayerMask m_LayerMask;
@@ -213,6 +223,8 @@ public class JumpController : MonoBehaviour
 
             //m_CameraController.SetShakeMultiplier(1f);
             //m_CameraController.ShakeCamera(false);
+            m_ThudAudioSource.Play();
+            m_PoofEffect.Play();
 
             m_CameraController.ResetFOV();
             m_JumpStreamEffect.gameObject.SetActive(false);
@@ -250,7 +262,7 @@ public class JumpController : MonoBehaviour
         }
     }
 
-    private void UpdateVisuals()
+    private void UpdateVisuals() // And charge audio
     {
         // Charge timer
         if(m_JumpChargeTimeText != null)
@@ -284,10 +296,22 @@ public class JumpController : MonoBehaviour
         {
             if (m_JumpChargeTimer > 0f)
             {
+                //m_ChargeAudioSource.pitch = Mathf.Clamp((m_JumpChargeTimer / m_MaxJumpChargeTime), 0.15f, 1f);
+
+                if (!m_ChargeAudioSource.isPlaying)
+                {
+                    m_ChargeAudioSource.Play();
+                }
+
                 m_JumpChargeEffect.gameObject.SetActive(true);
             }
             else
             {
+                if (m_ChargeAudioSource.isPlaying)
+                {
+                    m_ChargeAudioSource.Stop();
+                }
+
                 m_JumpChargeEffect.gameObject.SetActive(false);
             }
         }
@@ -313,6 +337,10 @@ public class JumpController : MonoBehaviour
         Debug.DrawRay(m_Rigidbody.position, m_Rigidbody.transform.forward * m_JumpLength, Color.red);
 
         Debug.Log("Jumped");
+
+        m_JumpAudioSource.Play();
+        m_PoofEffect.Play();
+
         m_AllowHitGround = false; //
         m_AllWheelsAreGrounded = false; //
         m_JumpChargeTimer = -2f; //
@@ -345,6 +373,11 @@ public class JumpController : MonoBehaviour
     private void Jump()
     {
         StartCoroutine(DelayedJump());
+    }
+
+    public bool AllWheelsAreGrounded()
+    {
+        return m_AllWheelsAreGrounded;
     }
 
     private Vector3 CalculateJump(Vector3 origin, Vector3 target, float timeToTarget)
