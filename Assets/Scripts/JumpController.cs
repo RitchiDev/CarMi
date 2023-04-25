@@ -168,14 +168,30 @@ public class JumpController : MonoBehaviour
     {
         bool groundHit = false;
 
-        for (int i = 0; i < m_Wheels.Count; i++)
-        {
-            WheelConfig wheelConfig = m_Wheels[i];
-            if (wheelConfig.GetWheelCollider().GetGroundHit(out WheelHit hit))
-            {
-                groundHit = true;
-            }
-        }
+        RaycastHit hit;
+        Ray checkGround = new Ray(m_Rigidbody.position, Vector3.down);
+
+        //if (m_InAir)
+        //{
+        //    if (Physics.Raycast(checkGround, out hit, 2f, m_LayerMask))
+        //    {
+        //        Debug.Log("Hit Ground");
+        //    }
+        //}
+
+        //for (int i = 0; i < m_Wheels.Count; i++)
+        //{
+        //    WheelConfig wheelConfig = m_Wheels[i];
+        //    if (wheelConfig.GetWheelCollider().GetGroundHit(out WheelHit hit))
+        //    {
+        //        if (m_InAir)
+        //        {
+        //            Debug.Log("Wheel on ground");
+        //        }
+
+        //        groundHit = true;
+        //    }
+        //}
 
         if (groundHit && m_InAir && m_AllowHitGround)
         {
