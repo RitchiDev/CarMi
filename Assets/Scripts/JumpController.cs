@@ -171,13 +171,14 @@ public class JumpController : MonoBehaviour
         RaycastHit hit;
         Ray checkGround = new Ray(m_Rigidbody.position, Vector3.down);
 
-        //if (m_InAir)
-        //{
-        //    if (Physics.Raycast(checkGround, out hit, 2f, m_LayerMask))
-        //    {
-        //        Debug.Log("Hit Ground");
-        //    }
-        //}
+        if (m_InAir)
+        {
+            if (Physics.Raycast(checkGround, out hit, 2f, m_LayerMask))
+            {
+                groundHit = true;
+                Debug.Log("Hit Ground");
+            }
+        }
 
         //for (int i = 0; i < m_Wheels.Count; i++)
         //{
