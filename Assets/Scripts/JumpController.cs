@@ -171,12 +171,25 @@ public class JumpController : MonoBehaviour
         RaycastHit hit;
         Ray checkGround = new Ray(m_Rigidbody.position, Vector3.down);
 
+        // This should be reversed DRY
         if (m_InAir)
         {
             if (Physics.Raycast(checkGround, out hit, 2f, m_LayerMask))
             {
                 groundHit = true;
                 Debug.Log("Hit Ground");
+            }
+        }
+        else
+        {
+            if (Physics.Raycast(checkGround, out hit, 2f, m_LayerMask))
+            {
+                if(m_CameraController.FOVIsDifferentThanStart())
+                {
+                    Debug.Log("Reset FOV");
+
+                    m_CameraController.ResetFOV();
+                }
             }
         }
 
