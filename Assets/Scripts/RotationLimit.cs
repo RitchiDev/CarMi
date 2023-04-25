@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RotationLimit : MonoBehaviour
 {
-    [SerializeField] private float xRotationLimit = 20;
-    [SerializeField] private float yRotationLimit = 20;
-    [SerializeField] private float zRotationLimit = 20;
+    [SerializeField] private float zRotationLimit = 45f;
 
     private void Update()
     {
-        float angle = transform.eulerAngles.z;
-        transform.eulerAngles = new Vector3(0f, 0f, ClampAngle(angle, -45f, 45f));
+        Vector3 originalRotation = transform.eulerAngles;
+        float angle = originalRotation.z;
+
+        transform.eulerAngles = new Vector3(originalRotation.x, originalRotation.y, ClampAngle(angle, -zRotationLimit, zRotationLimit));
     }
 
     private float ClampAngle(float angle, float min, float max)
