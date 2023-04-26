@@ -8239,6 +8239,8 @@ MonoBehaviour:
   m_VictoryMenu: {fileID: 6004894879525075464}
   m_FirstSelectedOnVictory: {fileID: 320893281}
   m_HighscoreText: {fileID: 672539929}
+  m_CurrentScoreText: {fileID: 6004894880064929370}
+  m_VictoryHeaderText: {fileID: 6004894879965385202}
 --- !u!4 &1029097162
 Transform:
   m_ObjectHideFlags: 0
