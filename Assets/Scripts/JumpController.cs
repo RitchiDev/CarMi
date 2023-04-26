@@ -64,6 +64,7 @@ public class JumpController : MonoBehaviour
         m_Input = new PlayerInput();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
+
     private void Start()
     {
         m_PositionLastFrame = transform.position;
