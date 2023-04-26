@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject m_VictoryMenu;
     [SerializeField] private Selectable m_FirstSelectedOnVictory;
     [SerializeField] private TMP_Text m_HighscoreText;
+    [SerializeField] private TMP_Text m_CurrentScoreText;
+    [SerializeField] private TMP_Text m_VictoryHeaderText;
 
     private void Awake()
     {
@@ -39,6 +41,12 @@ public class GameManager : MonoBehaviour
     {
         SetGameState(GameState.Playing);
         SetGameTime(1f);
+    }
+
+    public void VictoryButActuallyGameOver()
+    {
+        m_VictoryHeaderText.text = "Game Over";
+        SetGameState(GameState.Victory);
     }
 
     public void SetGameState(GameState gameState)
@@ -62,6 +70,8 @@ public class GameManager : MonoBehaviour
             }
 
             m_HighscoreText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
+
+            m_CurrentScoreText.text = ExScoreManager.Instance.GetScore().ToString();
 
             EventSystem.current.SetSelectedGameObject(m_FirstSelectedOnVictory.gameObject);
 

@@ -115,6 +115,12 @@ public class CarController : MonoBehaviour
 
     private void Update()
     {
+        if(transform.position.y < -10f)
+        {
+            GameManager.Instance.VictoryButActuallyGameOver();
+            gameObject.SetActive(false);
+        }
+
         m_CurrentSpeed = m_Rigidbody.velocity.magnitude;
 		m_VelocityAngle = -Vector3.SignedAngle(m_Rigidbody.velocity, transform.TransformDirection (Vector3.forward), Vector3.up);
 
