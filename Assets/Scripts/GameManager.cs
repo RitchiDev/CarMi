@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject m_PauseMenu;
     [SerializeField] private GameObject m_VictoryMenu;
     [SerializeField] private Selectable m_FirstSelectedOnVictory;
+    [SerializeField] private TMP_Text m_HighscoreText;
 
     private void Awake()
     {
@@ -33,6 +35,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SetGameState(GameState.Playing);
+        SetGameTime(1f);
+    }
+
     public void SetGameState(GameState gameState)
     {
         m_CurrentGameState = gameState;
@@ -45,6 +53,15 @@ public class GameManager : MonoBehaviour
             {
                 allAudioSources[i].Stop();
             }
+
+            int currentHighscore = PlayerPrefs.GetInt("Highscore", 0);
+
+            if(currentHighscore < ExScoreManager.Instance.GetScore())
+            {
+                PlayerPrefs.SetInt("Highscore", ExScoreManager.Instance.GetScore());
+            }
+
+            m_HighscoreText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
 
             EventSystem.current.SetSelectedGameObject(m_FirstSelectedOnVictory.gameObject);
 

@@ -65,9 +65,16 @@ public class PauseController : MonoBehaviour
 
     private void PauseGame()
     {
-        EventSystem.current.SetSelectedGameObject(m_FirstSelectedOnPause.gameObject);
+        if(m_FirstSelectedOnPause != null)
+        {
+            EventSystem.current.SetSelectedGameObject(m_FirstSelectedOnPause.gameObject);
+        }
 
-        m_PauseMenu.SetActive(true);
+        if(m_PauseMenu != null)
+        {
+            m_PauseMenu.SetActive(true);
+        }
+
         GameManager.Instance.SetGameState(GameState.Paused);
         GameManager.Instance.SetGameTime(0f);
     }

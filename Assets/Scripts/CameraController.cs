@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public static CameraController Instance { get; private set; }
+
     [SerializeField] private Camera m_Camera;
     [SerializeField] private Vector3 m_Offset = new Vector3();
     [SerializeField] private Transform m_Target;
@@ -26,6 +28,16 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("An instance of " + this + " already existed!");
+            Destroy(this);
+        }
+
         // 1 = true, 0 = false;
         m_ScreenShakeIsOn = Convert.ToBoolean(PlayerPrefs.GetInt("ScreenShakeProperty", 1));
     }
@@ -46,7 +58,7 @@ public class CameraController : MonoBehaviour
         HandleMovement();
         HandleRotation();
     }
-
+    
     public void TimedShakeCamera(float duration)
     {
         if (!m_ScreenShakeIsOn)
