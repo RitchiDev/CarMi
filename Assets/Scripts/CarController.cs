@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CarController : MonoBehaviour
 {
@@ -48,6 +50,15 @@ public class CarController : MonoBehaviour
     [Header("FR")]
     [SerializeField] private WheelCollider m_FrontRightWheelCollider;
 
+    [Header("Fuel")]
+    [SerializeField] TMP_Text m_SpeedText;
+    [SerializeField] RectTransform m_FuelArrow;
+    [SerializeField] private Image m_FuelImage;
+    [SerializeField] private float m_MaxFuel = 120f;
+    [SerializeField] float m_MinArrowAngle = 0;
+    [SerializeField] float m_MaxArrowAngle = -315f;
+    private float m_CurrentFuel;
+
     [Header("Effect")]
     [SerializeField] private ParticleSystem m_AsphaltSmokeEffect;
     public ParticleSystem AsphaltSmokeEffect => m_AsphaltSmokeEffect;
@@ -72,6 +83,8 @@ public class CarController : MonoBehaviour
         m_JumpController = GetComponent<JumpController>();
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Rigidbody.centerOfMass = m_CenterOfMass.localPosition;
+
+        m_CurrentFuel = m_MaxFuel;
 
         for (int i = 0; i < m_Wheels.Count; i++)
         {
@@ -102,6 +115,12 @@ public class CarController : MonoBehaviour
 
     private void Update()
     {
+        if(transform.position.y < -10f)
+        {
+            GameManager.Instance.VictoryButActuallyGameOver();
+            gameObject.SetActive(false);
+        }
+
         m_CurrentSpeed = m_Rigidbody.velocity.magnitude;
 		m_VelocityAngle = -Vector3.SignedAngle(m_Rigidbody.velocity, transform.TransformDirection (Vector3.forward), Vector3.up);
 
@@ -114,6 +133,10 @@ public class CarController : MonoBehaviour
         HandleMaxSlip();
 
         UpdateAudio();
+
+        UpdateFuelAndSpeed();
+
+        CheckFuel();
     }
 
     private void FixedUpdate()
@@ -140,6 +163,31 @@ public class CarController : MonoBehaviour
 
         m_CurrentAcceleration = m_VerticalInput;
         m_IsBraking = m_BrakeAction.IsPressed();
+    }
+
+    private void CheckFuel()
+    {
+        if(m_CurrentFuel <= 0f)
+        {
+            GameManager.Instance.SetGameState(GameState.Victory);
+            GameManager.Instance.SetGameTime(0f);
+            // Game over
+        }
+    }
+
+    private void UpdateFuelAndSpeed()
+    {
+        if (m_CurrentSpeed > 0.1f && m_JumpController.AllWheelsAreGrounded())
+        {
+            m_CurrentFuel -= Time.deltaTime;
+        }
+
+        m_FuelImage.fillAmount = m_CurrentFuel / m_MaxFuel;
+
+        float procent = m_CurrentFuel / m_MaxFuel;
+        float angle = (m_MaxArrowAngle - m_MinArrowAngle) * procent + m_MinArrowAngle;
+        m_FuelArrow.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        m_SpeedText.text = (m_CurrentSpeed * 3.6f).ToString("000"); // In hour
     }
 
     private void HandleMaxSlip()

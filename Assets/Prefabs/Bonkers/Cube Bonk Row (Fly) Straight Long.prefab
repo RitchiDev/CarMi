@@ -1,0 +1,2300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6196684674083094721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6196684674083094750}
+  m_Layer: 0
+  m_Name: Cube Bonk Row (Fly) Straight Long
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6196684674083094750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196684674083094721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 182.9, y: 10, z: 123.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 583221531992650198}
+  - {fileID: 583221532390012453}
+  - {fileID: 583221531867526919}
+  - {fileID: 583221532162950795}
+  - {fileID: 583221531328294020}
+  - {fileID: 583221531260918047}
+  - {fileID: 583221531449411580}
+  - {fileID: 583221531605182644}
+  - {fileID: 583221533242715730}
+  - {fileID: 583221531573826869}
+  - {fileID: 583221531564004156}
+  - {fileID: 583221533221330431}
+  - {fileID: 583221531360464379}
+  - {fileID: 583221532469939927}
+  - {fileID: 583221531731481920}
+  - {fileID: 583221533007610973}
+  - {fileID: 583221532298443012}
+  - {fileID: 583221531902684113}
+  - {fileID: 583221532478369364}
+  - {fileID: 583221531742213657}
+  - {fileID: 583221531926182243}
+  - {fileID: 583221532120401999}
+  - {fileID: 583221532145502889}
+  - {fileID: 583221531911941913}
+  - {fileID: 583221533193567637}
+  - {fileID: 583221531862884077}
+  - {fileID: 583221531595895927}
+  - {fileID: 583221533218801833}
+  - {fileID: 583221532963675096}
+  - {fileID: 583221531545415977}
+  - {fileID: 583221532421336078}
+  - {fileID: 583221532072210246}
+  - {fileID: 583221531537211367}
+  - {fileID: 583221533277481295}
+  - {fileID: 583221532584806385}
+  - {fileID: 583221532007057712}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6196684673293552703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531992650198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673293552703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673361593482
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531926182243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673361593482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673371461176
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531902684113 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673371461176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673380946672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531911941913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673380946672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673398678276
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (25)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531862884077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673398678276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673403341550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531867526919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673403341550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673535715497
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531731481920 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673535715497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673546480624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531742213657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673546480624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673665235810
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532162950795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673665235810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673681635136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532145502889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673681635136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673690088870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532120401999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673690088870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673742475951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (31)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532072210246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673742475951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673811297497
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (35)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532007057712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673811297497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673824078357
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531449411580 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673824078357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673903194130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531360464379 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673903194130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684673937854829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531328294020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684673937854829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674004706550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531260918047 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674004706550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674205682078
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (26)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531595895927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674205682078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674214745437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531605182644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674214745437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674240720597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531564004156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674240720597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674250819804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531573826869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674250819804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674255637696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (29)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531545415977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674255637696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674281013774
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (32)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221531537211367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674281013774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674409298356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221533007610973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674409298356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674466211377
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (28)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532963675096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674466211377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674679313574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (33)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221533277481295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674679313574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674711458747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221533242715730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674711458747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674723930134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221533221330431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674723930134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674754901312
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (27)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221533218801833 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674754901312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674763227260
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (24)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221533193567637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674763227260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674945266494
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532469939927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674945266494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674953745341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532478369364 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674953745341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684674997670375
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (30)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532421336078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684674997670375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684675033189324
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532390012453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684675033189324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684675109553389
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532298443012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684675109553389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6196684675362159128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6196684674083094750}
+    m_Modifications:
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766393482232921589, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+      propertyPath: m_Name
+      value: Cube Bonk Variant (Fly) (34)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+--- !u!4 &583221532584806385 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6766393482232921577, guid: 0a0de1fd51a203142bebccb5ce92bb2a, type: 3}
+  m_PrefabInstance: {fileID: 6196684675362159128}
+  m_PrefabAsset: {fileID: 0}
