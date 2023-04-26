@@ -9,12 +9,21 @@ public class WheelConfig
 	[SerializeField] private Transform m_WheelTransform;
 	[SerializeField] private float m_SlipAmountNeededParticles;
 	[SerializeField] private Vector3 m_SlipTrailOffset;
-	[SerializeField] private TrailRenderer m_SlipTrail;
+	private TrailRenderer m_SlipTrail;
     private WheelHit m_WheelHit;
+	private TrailRenderer m_TrailRenderer;
+	private CarController m_CarController;
+	private Vector3 m_HitPoint;
 
     public float CurrentMaxSlip { get { return Mathf.Max(CurrentForwardSleep, CurrentSidewaysSleep); } }
 	public float CurrentForwardSleep { get; private set; }
 	public float CurrentSidewaysSleep { get; private set; }
+
+	public void SetController(CarController carController)
+    {
+		m_CarController = carController;
+		m_SlipTrail = carController.TrailRenderer;
+    }
 
 	public void FixedUpdate()
     {
@@ -53,6 +62,27 @@ public class WheelConfig
 		if (m_WheelCollider.isGrounded && CurrentMaxSlip > m_SlipAmountNeededParticles)
 		{
 			//Emit particle.
+			ParticleSystem particles = m_CarController.AsphaltSmokeEffect;
+			Vector3 point = m_WheelCollider.transform.position;
+			point.y = m_WheelHit.point.y;
+			particles.transform.position = point;
+			particles.Emit(1);
+
+			if (m_TrailRenderer == null)
+			{
+				//Get free or create trail.
+				m_HitPoint = m_WheelCollider.transform.position;
+				m_HitPoint.y = m_WheelHit.point.y;
+				m_TrailRenderer = m_CarController.GetAvailableTrail(m_HitPoint);
+				m_TrailRenderer.transform.SetParent(m_WheelCollider.transform);
+				m_TrailRenderer.transform.localPosition += m_SlipTrailOffset;
+			}
+		}
+		else if (m_TrailRenderer != null)
+		{
+			//Set trail as free.
+			m_CarController.SetAvailableTrail(m_TrailRenderer);
+			m_TrailRenderer = null;
 		}
 	}
 

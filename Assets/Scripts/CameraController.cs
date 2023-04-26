@@ -103,7 +103,11 @@ public class CameraController : MonoBehaviour
     private void HandleMovement()
     {
         Vector3 targetPosition = m_Target.TransformPoint(m_Offset);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, m_MoveSpeed * Time.deltaTime);
+
+        if(transform.position != targetPosition)
+        {
+            transform.position = Vector3.Lerp(transform.position, targetPosition, m_MoveSpeed * Time.deltaTime);
+        }
     }
 
     private void HandleRotation()
@@ -189,5 +193,10 @@ public class CameraController : MonoBehaviour
         }
 
         m_Camera.fieldOfView = FOV;
+    }
+
+    public bool FOVIsDifferentThanStart()
+    {
+        return m_Camera.fieldOfView != m_StartFieldOfView;
     }
 }
