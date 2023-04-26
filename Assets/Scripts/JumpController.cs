@@ -64,6 +64,7 @@ public class JumpController : MonoBehaviour
         m_Input = new PlayerInput();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
+
     private void Start()
     {
         m_PositionLastFrame = transform.position;
@@ -126,6 +127,15 @@ public class JumpController : MonoBehaviour
         }
 
         // Should be rigidbody.rotation, but since that doesn't work and this a game jame... *shrug*
+        //Quaternion currentRotation = transform.rotation;
+
+        //Quaternion newRotation = Quaternion.LookRotation(m_Rigidbody.velocity, Vector3.up);
+
+        //currentRotation.y = newRotation.y;
+        //currentRotation.z = newRotation.z;
+
+        //transform.rotation = currentRotation;
+
         transform.rotation = Quaternion.LookRotation(m_Rigidbody.velocity, Vector3.up);
 
         m_Rigidbody.AddForce(m_Rigidbody.transform.right * m_HorizontalInput * m_InAirMovementSpeed);
@@ -296,7 +306,7 @@ public class JumpController : MonoBehaviour
         {
             if (m_JumpChargeTimer > 0f)
             {
-                //m_ChargeAudioSource.pitch = Mathf.Clamp((m_JumpChargeTimer / m_MaxJumpChargeTime), 0.15f, 1f);
+                m_ChargeAudioSource.pitch = Mathf.Clamp((m_JumpChargeTimer / m_MaxJumpChargeTime), 0.15f, 1.5f);
 
                 if (!m_ChargeAudioSource.isPlaying)
                 {
