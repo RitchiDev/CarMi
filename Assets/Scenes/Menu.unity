@@ -35381,6 +35381,7 @@ GameObject:
   - component: {fileID: 2039344006}
   - component: {fileID: 2039344005}
   - component: {fileID: 2039344007}
+  - component: {fileID: 2039344008}
   m_Layer: 5
   m_Name: Highscore Text (TMP)
   m_TagString: Untagged
@@ -35517,6 +35518,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 30
+--- !u!114 &2039344008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039344003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8206dfd5912064541a8eff03e962868c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighscoreText: {fileID: 2039344005}
 --- !u!1 &2040373630
 GameObject:
   m_ObjectHideFlags: 0
