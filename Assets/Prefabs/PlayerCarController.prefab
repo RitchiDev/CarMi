@@ -10685,7 +10685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2731848271017300378}
   - component: {fileID: 2731848271017300379}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: FrontLeftWheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10827,7 +10827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2731848271255060710}
   - component: {fileID: 2731848271255060711}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: BackRightWheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11067,6 +11067,12 @@ MonoBehaviour:
     m_SlipTrailOffset: {x: 0, y: 0.05, z: 0}
   m_FrontLeftWheelCollider: {fileID: 2731848271017300379}
   m_FrontRightWheelCollider: {fileID: 2731848271533029885}
+  m_SpeedText: {fileID: 0}
+  m_FuelArrow: {fileID: 0}
+  m_FuelImage: {fileID: 0}
+  m_MaxFuel: 120
+  m_MinArrowAngle: 0
+  m_MaxArrowAngle: -315
   m_AsphaltSmokeEffect: {fileID: 269449619075646318}
   m_TrailRenderer: {fileID: 3039973402603393374}
   m_TrailHolder: {fileID: 3127939998087097494}
@@ -11237,7 +11243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2731848271533029884}
   - component: {fileID: 2731848271533029885}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: FrontRightWheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11379,7 +11385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2731848271674171220}
   - component: {fileID: 2731848271674171221}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: BackLeftWheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
