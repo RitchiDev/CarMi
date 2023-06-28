@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
+using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class CarController : MonoBehaviour
 {
@@ -51,12 +51,12 @@ public class CarController : MonoBehaviour
     [SerializeField] private WheelCollider m_FrontRightWheelCollider;
 
     [Header("Fuel")]
-    [SerializeField] TMP_Text m_SpeedText;
-    [SerializeField] RectTransform m_FuelArrow;
-    [SerializeField] private Image m_FuelImage;
-    [SerializeField] private float m_MaxFuel = 120f;
-    [SerializeField] float m_MinArrowAngle = 0;
-    [SerializeField] float m_MaxArrowAngle = -315f;
+    [SerializeField] private TMP_Text      m_SpeedText;
+    [SerializeField] private RectTransform m_FuelArrow;
+    [SerializeField] private Image         m_FuelImage;
+    [SerializeField] private float         m_MaxFuel       = 120f;
+    [SerializeField] private float         m_MinArrowAngle = 0;
+    [SerializeField] private float         m_MaxArrowAngle = -315f;
     private float m_CurrentFuel;
 
     [Header("Effect")]
@@ -73,15 +73,15 @@ public class CarController : MonoBehaviour
 
     [Header("Slip Sound")]
     [SerializeField] private AudioSource m_TireSlipAudioSource;
-    [SerializeField] private float m_MinSlipSound = 0.15f;
-    [SerializeField] float m_MaxSlipForSound = 1f;
+    [SerializeField] private float m_MinSlipSound    = 0.15f;
+    [SerializeField] private float m_MaxSlipForSound = 1f;
     private float m_CurrentMaxSlip;
 
     private void Awake()
     {
-        m_Input = new PlayerInput();
-        m_JumpController = GetComponent<JumpController>();
-        m_Rigidbody = GetComponent<Rigidbody>();
+        m_Input                  = new PlayerInput();
+        m_JumpController         = GetComponent<JumpController>();
+        m_Rigidbody              = GetComponent<Rigidbody>();
         m_Rigidbody.centerOfMass = m_CenterOfMass.localPosition;
 
         m_CurrentFuel = m_MaxFuel;
@@ -121,7 +121,7 @@ public class CarController : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        m_CurrentSpeed = m_Rigidbody.velocity.magnitude;
+        m_CurrentSpeed  = m_Rigidbody.velocity.magnitude;
 		m_VelocityAngle = -Vector3.SignedAngle(m_Rigidbody.velocity, transform.TransformDirection (Vector3.forward), Vector3.up);
 
         GetInput();
@@ -153,13 +153,13 @@ public class CarController : MonoBehaviour
     private void UpdateMovementValue(InputAction.CallbackContext context)
     {
         m_HorizontalInput = context.ReadValue<Vector2>().x;
-        m_VerticalInput = context.ReadValue<Vector2>().y;
+        m_VerticalInput   = context.ReadValue<Vector2>().y;
     }
 
     private void GetInput()
     {
         m_HorizontalInput = m_MovementAction.ReadValue<Vector2>().x;
-        m_VerticalInput = m_MovementAction.ReadValue<Vector2>().y;
+        m_VerticalInput   = m_MovementAction.ReadValue<Vector2>().y;
 
         m_CurrentAcceleration = m_VerticalInput;
         m_IsBraking = m_BrakeAction.IsPressed();
@@ -169,8 +169,9 @@ public class CarController : MonoBehaviour
     {
         if(m_CurrentFuel <= 0f)
         {
-            GameManager.Instance.SetGameState(GameState.Victory);
-            GameManager.Instance.SetGameTime(0f);
+            m_MovementAction.Disable();
+            //GameManager.Instance.SetGameState(GameState.Victory);
+            //GameManager.Instance.SetGameTime(0f);
             // Game over
         }
     }
@@ -185,9 +186,9 @@ public class CarController : MonoBehaviour
         m_FuelImage.fillAmount = m_CurrentFuel / m_MaxFuel;
 
         float procent = m_CurrentFuel / m_MaxFuel;
-        float angle = (m_MaxArrowAngle - m_MinArrowAngle) * procent + m_MinArrowAngle;
+        float angle   = (m_MaxArrowAngle - m_MinArrowAngle) * procent + m_MinArrowAngle;
         m_FuelArrow.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        m_SpeedText.text = (m_CurrentSpeed * 3.6f).ToString("000"); // In hour
+        m_SpeedText.text     = (m_CurrentSpeed * 3.6f).ToString("000"); // In hour
     }
 
     private void HandleMaxSlip()
@@ -236,7 +237,7 @@ public class CarController : MonoBehaviour
 
             float slipVolumeProcent = m_CurrentMaxSlip / m_MaxSlipForSound;
             m_TireSlipAudioSource.volume = slipVolumeProcent * 0.5f;
-            m_TireSlipAudioSource.pitch = Mathf.Clamp(slipVolumeProcent, 0.75f, 1);
+            m_TireSlipAudioSource.pitch  = Mathf.Clamp(slipVolumeProcent, 0.75f, 1);
         }
         else
         {
@@ -281,7 +282,7 @@ public class CarController : MonoBehaviour
 
     private void HandleMotor()
     {
-        float rpm = m_CurrentAcceleration > 0 ? m_MaxRPM : m_MinRPM;
+        float rpm   = m_CurrentAcceleration > 0 ? m_MaxRPM : m_MinRPM;
         float speed = m_CurrentAcceleration > 0 ? m_RpmEngineToRpmWheelsLerpSpeed : m_RpmEngineToRpmWheelsLerpSpeed * 0.2f;
 
         m_EngineRPM = Mathf.Lerp(m_EngineRPM, rpm, speed * Time.fixedDeltaTime);
@@ -326,7 +327,7 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            m_FrontLeftWheelCollider.motorTorque = 0;
+            m_FrontLeftWheelCollider.motorTorque  = 0;
             m_FrontRightWheelCollider.motorTorque = 0;
         }
 
@@ -369,7 +370,7 @@ public class CarController : MonoBehaviour
     private void HandleSteering()
     {
         m_CurrentSteerAngle = m_MaxSteerAngle * m_HorizontalInput;
-        m_FrontLeftWheelCollider.steerAngle = m_CurrentSteerAngle;
+        m_FrontLeftWheelCollider.steerAngle  = m_CurrentSteerAngle;
         m_FrontRightWheelCollider.steerAngle = m_CurrentSteerAngle;
     }
 

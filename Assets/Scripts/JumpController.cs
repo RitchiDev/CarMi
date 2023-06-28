@@ -1,10 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
+using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class JumpController : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class JumpController : MonoBehaviour
 
     private float m_HorizontalInput;
     private float m_VerticalInput;
-    private bool m_IsChargingJump;
+    private bool  m_IsChargingJump;
 
     private Rigidbody m_Rigidbody;
     [SerializeField] private CameraController m_CameraController;
@@ -29,16 +29,16 @@ public class JumpController : MonoBehaviour
     [SerializeField] private ParticleSystem m_PoofEffect;
 
     [Header("Jump")]
-    [SerializeField] private float m_JumpLength = 100f;
-    [SerializeField] private float m_TimeToTarget = 5f;
-    [SerializeField] private Color m_ChargeColor = Color.yellow;
-    [SerializeField] private Color m_MaxChargeColor = Color.red;
+    [SerializeField] private float          m_JumpLength     = 100f;
+    [SerializeField] private float          m_TimeToTarget   = 5f;
+    [SerializeField] private Color          m_ChargeColor    = Color.yellow;
+    [SerializeField] private Color          m_MaxChargeColor = Color.red;
     [SerializeField] private ParticleSystem m_JumpStreamEffect;
 
     [Header("Charge")]
-    [SerializeField] private float m_MaxJumpChargeTime = 3f;
-    [SerializeField] private TMP_Text m_JumpChargeTimeText;
-    [SerializeField] private Image m_JumpChargeImage;
+    [SerializeField] private float          m_MaxJumpChargeTime = 3f;
+    [SerializeField] private TMP_Text       m_JumpChargeTimeText;
+    [SerializeField] private Image          m_JumpChargeImage;
     [SerializeField] private ParticleSystem m_JumpChargeEffect;
     private float m_JumpChargeTimer;
 
@@ -49,19 +49,19 @@ public class JumpController : MonoBehaviour
 
     [Header("Charge Sound")]
     [SerializeField] private AudioSource m_ChargeAudioSource;
-    [SerializeField] float m_PitchOffset = 0.5f;
+    [SerializeField] private float m_PitchOffset = 0.5f;
 
     [Header("Layers")]
     [SerializeField] protected LayerMask m_LayerMask;
 
     [Header("Collision")]
-    [SerializeField] protected float m_CollisionRayLength = 2.25f;
+    [SerializeField] protected float m_CollisionRayLength   = 2.25f;
     [SerializeField] protected Vector3 m_CollisionRayOffset = Vector3.zero;
     private Vector3 m_PositionLastFrame;
 
     private void Awake()
     {
-        m_Input = new PlayerInput();
+        m_Input     = new PlayerInput();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -114,9 +114,9 @@ public class JumpController : MonoBehaviour
     private void GetInput()
     {
         m_HorizontalInput = m_MovementAction.ReadValue<Vector2>().x;
-        m_VerticalInput = m_MovementAction.ReadValue<Vector2>().y;
+        m_VerticalInput   = m_MovementAction.ReadValue<Vector2>().y;
 
-        m_IsChargingJump = m_ChargeJumpAction.IsPressed();
+        m_IsChargingJump  = m_ChargeJumpAction.IsPressed();
     }
 
     private void HandleInAirMovement()
@@ -167,7 +167,7 @@ public class JumpController : MonoBehaviour
     {
         Vector3 transformPosition = transform.position + m_CollisionRayOffset;
         Vector3 positionLastFrame = m_PositionLastFrame + m_CollisionRayOffset;
-        return (transformPosition - positionLastFrame);
+        return  (transformPosition - positionLastFrame);
     }
 
     private void CheckForGrounded()
@@ -366,9 +366,9 @@ public class JumpController : MonoBehaviour
 
         Vector3 targetPoint = m_Rigidbody.position + m_Rigidbody.transform.forward * m_JumpLength;
 
-        float timeToTarget = m_TimeToTarget;
+        float timeToTarget  = m_TimeToTarget;
 
-        Vector3 throwSpeed = CalculateJump(m_Rigidbody.position, targetPoint, timeToTarget);
+        Vector3 throwSpeed  = CalculateJump(m_Rigidbody.position, targetPoint, timeToTarget);
 
         m_Rigidbody.AddForce(throwSpeed, ForceMode.VelocityChange);
 
@@ -393,12 +393,12 @@ public class JumpController : MonoBehaviour
     private Vector3 CalculateJump(Vector3 origin, Vector3 target, float timeToTarget)
     {
         // calculate vectors
-        Vector3 toTarget = target - origin;
+        Vector3 toTarget   = target - origin;
         Vector3 toTargetXZ = toTarget;
         toTargetXZ.y = 0;
 
         // calculate xz and y
-        float y = toTarget.y;
+        float y  = toTarget.y;
         float xz = toTargetXZ.magnitude;
 
         // calculate starting speeds for xz and y. Physics forumulase deltaX = v0 * t + 1/2 * a * t * t
@@ -407,7 +407,7 @@ public class JumpController : MonoBehaviour
         // and y = v0y * t - 1/2 * gravity * t * t => v0y * t = y + 1/2 * gravity * t * t => v0y = y / t + 1/2 * gravity * t
         float t = timeToTarget;
 
-        float v0y = y / t + 0.5f * Physics.gravity.magnitude * t;
+        float v0y  = y / t + 0.5f * Physics.gravity.magnitude * t;
         float v0xz = xz / t;
 
         // create result vector for calculated starting speeds

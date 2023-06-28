@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public enum GameState
 {
     Playing = 0,
-    Paused = 1,
+    Paused  = 1,
     Victory = 2,
 }
 

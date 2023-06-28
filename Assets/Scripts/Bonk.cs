@@ -1,24 +1,24 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Bonk : MonoBehaviour
 {
-    [SerializeField] private AudioClip m_BonkSound;
+    [SerializeField] private AudioClip      m_BonkSound;
     [SerializeField] private ParticleSystem m_ParticleSystem;
 
     private Rigidbody m_RigidBody;
-    private Collider m_Collider;
+    private Collider  m_Collider;
 
     private void Awake()
     {
-        m_Collider = GetComponent<Collider>();
+        m_Collider  = GetComponent<Collider>();
         m_RigidBody = GetComponent<Rigidbody>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        CarController player = other.gameObject.GetComponent<CarController>();
+        CarController player         = other.gameObject.GetComponent<CarController>();
         CarController playerInParent = other.gameObject.GetComponentInParent<CarController>();
 
         if (player)
@@ -65,14 +65,14 @@ public class Bonk : MonoBehaviour
         ExScoreManager.Instance.AddScore(5);
         AudioSource.PlayClipAtPoint(m_BonkSound, transform.position);
 
-        m_Collider.isTrigger = false;
+        m_Collider.isTrigger   = false;
         m_RigidBody.useGravity = true;
-        m_Collider.enabled = false;
+        m_Collider.enabled     = false;
 
         yield return new WaitForSeconds(0.1f);
 
-        m_RigidBody.AddForce(Vector3.up * 1000f * 2f);
-        m_RigidBody.AddForce(direction * 1555f * 2f);
+        m_RigidBody.AddForce(1000f * 2f * Vector3.up);
+        m_RigidBody.AddForce(1555f * 2f * direction);
     }
 
     private IEnumerator Deactivate()
